@@ -21,8 +21,8 @@ function App() {
     setUserInput("");
   }
 
-  function handleRemoveButtonClick(indexToRemove) {
-    const filteredTodos = todos.filter((_, i)=> i !== indexToRemove);
+  function handleDeleteButtonClick(indexToDelete) {
+    const filteredTodos = todos.filter((_, i) => i !== indexToDelete);
     setTodos(filteredTodos);
   }
 
@@ -31,7 +31,7 @@ function App() {
       <Header />
       <form onSubmit={handleSubmit}>
         <input
-          type='text'
+          type="text"
           placeholder="Type your first to do"
           value={userInput}
           onChange={handleUserInputChange}
@@ -40,10 +40,9 @@ function App() {
       </form>
       {todos.map((userInput, index) => (
         <li className="container" key={index}>
-          {userInput}{" "}
-          <button onClick={() => handleRemoveButtonClick(index)}>
-            Remove
-          </button>
+          <input className='checkbox' type='checkbox'/>
+          {userInput}
+          <button className='btn--delete' onClick={() => handleDeleteButtonClick(index)}>Delete</button>
         </li>
       ))}
     </>
