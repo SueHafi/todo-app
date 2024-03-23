@@ -21,11 +21,9 @@ function App() {
     setUserInput("");
   }
 
-  function handleRemoveButtonClick(event) {
-    const currentListElement = event.target;
-    setTodos(todos.filter());
-    //filter out the current list element and render the rest of the todos
-    //look up how the filter method works
+  function handleRemoveButtonClick(indexToRemove) {
+    const filteredTodos = todos.filter((_, i)=> i !== indexToRemove);
+    setTodos(filteredTodos);
   }
 
   return (
@@ -33,6 +31,7 @@ function App() {
       <Header />
       <form onSubmit={handleSubmit}>
         <input
+          type='text'
           placeholder="Type your first to do"
           value={userInput}
           onChange={handleUserInputChange}
@@ -40,12 +39,12 @@ function App() {
         <button>Add</button>
       </form>
       {todos.map((userInput, index) => (
-        <div className="container" key={index}>
-          <li>{userInput}</li>
-          <button onClick={(event) => handleRemoveButtonClick(event)}>
+        <li className="container" key={index}>
+          {userInput}{" "}
+          <button onClick={() => handleRemoveButtonClick(index)}>
             Remove
           </button>
-        </div>
+        </li>
       ))}
     </>
   );
