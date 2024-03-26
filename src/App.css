@@ -11,6 +11,9 @@ form {
     list-style-type: none;
 }
 
+.line-through-text {
+    text-decoration: line-through;
+}
 .checkbox {
    padding: 0;
    margin-top: 0;
