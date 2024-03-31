@@ -1,28 +1,130 @@
-form {
-    display: inline-block;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .container {
-    display: flex;
-    gap: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-    list-style-type: none;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  margin-top: 4rem;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.todo-input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.user-input-box {
+  font-size: 2.5rem;
+  padding: 1rem;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.btn--add {
+  font-size: 2.5rem;
+  border-radius: 0px 6px 6px 0px;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.btn--add:hover {
+  background-color: #8d8d8d;
+  color: white;
+  cursor: pointer;
+}
+
+.btn--add:active {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.todos-li {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.todos-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+
+.todos-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .line-through-text {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
+
+.fuzzy-bubbles-regular {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
+.fuzzy-bubbles-regular::first-letter {
+  text-transform: uppercase;
+}
+
 .checkbox {
-   padding: 0;
-   margin-top: 0;
-   margin-bottom: 0;
+  width: 2.8rem;
+  height: 2.8rem;
+  flex-shrink: 0;
 }
 
 .btn--delete {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  font-size: 2.5rem;
+  border-radius: 6px;
+  border-width: 0.15rem;
+  align-self: center;
+  background-color: #f0f0f0;
+}
+
+.btn--delete:hover {
+  background-color: #8d8d8d;
+  color: white;
+  cursor: pointer;
+}
+
+.btn--delete:active {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

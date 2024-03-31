@@ -1,5 +1,5 @@
 export default function Header() {
-  return <header>
-    <h1>To do list</h1>
+  return <header className="header">
+    <h1 className="title">Todo list</h1>
   </header>
 }

@@ -30,9 +30,14 @@ function App() {
     setTodos(filteredTodos);
   }
 
-  // need a deep copy
   function handleCheckboxClick(event, index) {
-    const newTodos = [...todos];
+    // const newTodos = todos.map((todo)=> {
+    //   // const copiedTodo = Object.assign({},todo);
+    //   const copiedTodo = {...todo};
+    //   return copiedTodo;
+    // });
+
+    const newTodos = JSON.parse(JSON.stringify(todos));
     newTodos[index].isChecked = event.target.checked;
     setTodos(newTodos);
   }
@@ -40,37 +45,42 @@ function App() {
   console.log(todos);
 
   return (
-    <>
+    <div className="container">
       <Header />
-      <form onSubmit={handleSubmit}>
+      <form className="todo-input-container" onSubmit={handleSubmit}>
         <input
+          className="user-input-box"
           type="text"
           placeholder="Type your first to do"
           value={userInput}
           onChange={handleUserInputChange}
         />
-        <button>Add</button>
+        <button className="btn--add">Add</button>
       </form>
       {todos.map((todo, index) => (
-        <li className="container" key={todo.id}>
-          <input
-            checked={todos[index].isChecked}
-            className="checkbox"
-            type="checkbox"
-            onChange={(event) => handleCheckboxClick(event, index)}
-          />
-          <span className={todo.isChecked ? "line-through-text" : ""}>
-            {todo.text}
-          </span>
-          <button
-            className="btn--delete"
-            onClick={() => handleDeleteButtonClick(index)}
-          >
-            Delete
-          </button>
+        <li className="todos-li" key={todo.id}>
+          <div className="todos-container">
+            <div className="todos-checkbox-container">
+              <input
+                checked={todos[index].isChecked}
+                className="checkbox"
+                type="checkbox"
+                onChange={(event) => handleCheckboxClick(event, index)}
+              />
+              <span className={"fuzzy-bubbles-regular" +`${todo.isChecked ? " line-through-text" : ""}`}>
+                {todo.text}
+              </span>
+            </div>
+            <button
+              className="btn--delete"
+              onClick={() => handleDeleteButtonClick(index)}
+            >
+              Delete
+            </button>
+          </div>
         </li>
       ))}
-    </>
+    </div>
   );
 }
 
