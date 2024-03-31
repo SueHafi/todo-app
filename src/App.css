@@ -15,14 +15,17 @@ body {
   font-family: sans-serif;
 }
 
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.header {
-  margin-top: 4rem;
+  padding-top: 4rem;
 }
 
 .title {
@@ -69,6 +72,16 @@ body {
   margin-bottom: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 0.2rem solid #e4e3e3;
+  padding-bottom: 1rem;
+}
+
+.todos-li:last-child {
+  margin-bottom: 0;
 }
 
 .todos-container {
@@ -89,13 +102,15 @@ body {
   text-decoration: line-through;
 }
 
-.fuzzy-bubbles-regular {
+.todo-text {
   font-family: "Fuzzy Bubbles", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 3rem;
+  flex-grow: 1;
 }
-.fuzzy-bubbles-regular::first-letter {
+
+.todo-text::first-letter {
   text-transform: uppercase;
 }
 
@@ -127,4 +142,28 @@ body {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: auto;
+  background-color: #f0f0f0;
+}
+
+.github-link:link {
+  color: blue;
+}
+
+.github-link:visited {
+  color: purple;
+}
+
+.github-link:hover {
+  color: black;
+}
+
+.github-link:active {
+  color: white;
+  text-decoration: none;
 }
