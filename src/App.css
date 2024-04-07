@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #fff4d6;
 }
 
 .root {
@@ -22,16 +23,22 @@ body {
 }
 
 .container {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 4rem;
+  padding: 2rem;
+  background-image: url(notepadDesign4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
 }
 
 .title {
-  margin-top: 0;
+  margin-top: 6rem;
   margin-bottom: 4rem;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   text-align: center;
 }
@@ -43,13 +50,13 @@ body {
 }
 
 .user-input-box {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   padding: 1rem;
   border-radius: 6px 0px 0px 6px;
 }
 
 .btn--add {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   border-radius: 0px 6px 6px 0px;
   padding: 1rem;
   background-color: #f0f0f0;
@@ -106,7 +113,7 @@ body {
   font-family: "Fuzzy Bubbles", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2rem;
   flex-grow: 1;
 }
 
@@ -125,7 +132,7 @@ body {
   margin-bottom: 0;
   display: inline-block;
   padding: 0.5rem 0.8rem;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   border-radius: 6px;
   border-width: 0.15rem;
   align-self: center;
@@ -146,7 +153,7 @@ body {
 
 .footer {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin-top: auto;
   background-color: #f0f0f0;
 }
@@ -166,4 +173,43 @@ body {
 .github-link:active {
   color: white;
   text-decoration: none;
+}
+
+/* for ipads and tablets */
+@media (min-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .user-input-box {
+    font-size: 2.5rem;
+  }
+
+  .btn--add {
+    font-size: 2.5rem;
+  }
+
+  .todo-text {
+    font-size: 3rem;
+  }
+
+  .btn--delete {
+    font-size: 2.5rem;
+  }
+
+  .footer {
+    font-size: 1.8rem;
+  }
+}
+
+/* for laptops and pcs */
+@media (min-width: 1000px) {
+  .container {
+    background-color: #fff4d6;
+  }
+
+  html,
+  body {
+    background-color: transparent;
+  }
 }
