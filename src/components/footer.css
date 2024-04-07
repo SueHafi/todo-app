@@ -1,0 +1,23 @@
+.footer {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: auto;
+  background-color: #f0f0f0;
+}
+
+.github-link:link {
+  color: blue;
+}
+
+.github-link:visited {
+  color: purple;
+}
+
+.github-link:hover {
+  color: black;
+}
+
+.github-link:active {
+  color: white;
+  text-decoration: none;
+}

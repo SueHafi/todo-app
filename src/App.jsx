@@ -2,7 +2,9 @@ import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./App.css";
+
 
 function App() {
   const [userInput, setUserInput] = useState("");
@@ -80,14 +82,7 @@ function App() {
           </li>
         ))}
       </div>
-      <footer className="footer">
-        <p>
-          &copy; 2023 Sue Hafizoglu | See code at{" "}
-          <a className="github-link" href="#">
-            GitHub
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }
