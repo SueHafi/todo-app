@@ -50,4 +50,4 @@ npm start
 ### Building the project
 
 - Build the project for production: `npm run build`
-- Build the project for development (linting errors won't fail the build): `npm run build:dev`
+- Build the project for development (linting errors won't fail the build): `npm run dev`
