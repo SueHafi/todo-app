@@ -1,9 +1,9 @@
-#Todo List React Application
+# Todo List React Application
 A todo list where you can add multiple todo tasks, tick it as completed or delete it.
 
 Made with React and Vite.
 
-##Instructions on Running the Project:
+## Instructions on Running the Project:
 
 ## Getting started
 
